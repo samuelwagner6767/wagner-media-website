@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wagner Communication & Media Management – Social Media, Content-Produktion und Webdesign für kleine Unternehmen.">
+  <title>Wagner Communication & Media Management</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="#start">Wagner <span>Communication & Media</span></a>
+  <button class="menu" aria-label="Menü öffnen">☰</button>
+  <nav>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#pakete">Pakete</a>
+    <a href="#ueber">Über uns</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="start">
+  <div class="hero-copy">
+    <p class="kicker">Medienlösungen für kleine Unternehmen</p>
+    <h1>Mehr Sichtbarkeit.<br><em>Weniger Aufwand.</em></h1>
+    <p>Wir übernehmen Social Media Management, Content-Produktion, Videoschnitt und auf Anfrage auch die Erstellung moderner Unternehmenswebsites.</p>
+    <div class="actions">
+      <a class="btn light" href="#kontakt">Angebot anfragen</a>
+      <a class="btn ghost" href="tel:+491795630406">Jetzt anrufen</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="bars"><i></i><i></i><i></i><i></i><i></i></div>
+    <strong>Content. Planung. Betreuung.</strong>
+    <span>Persönlich und transparent.</span>
+  </div>
+</section>
+
+<section class="section" id="leistungen">
+  <p class="kicker dark">01 / Leistungen</p>
+  <h2>Professionelle Kommunikation, die zu Ihrem Unternehmen passt.</h2>
+  <div class="services">
+    <article><span>01</span><h3>Social Media Management</h3><p>Pflege Ihrer Unternehmensaccounts, Redaktionsplanung und regelmäßige Beiträge.</p></article>
+    <article><span>02</span><h3>Content-Produktion</h3><p>Konzeption, Aufnahme, Schnitt und Bearbeitung von Videos sowie Bild- und Textinhalten.</p></article>
+    <article><span>03</span><h3>Websites</h3><p>Neue, mobil optimierte Unternehmenswebsites oder Modernisierung bestehender Auftritte.</p></article>
+    <article><span>04</span><h3>Individuelle Medienlösungen</h3><p>Weitere Leistungen passend zu Ihren Zielen und Ihrem gewünschten Umfang.</p></article>
+  </div>
+</section>
+
+<section class="section alt" id="pakete">
+  <p class="kicker dark">02 / Pakete</p>
+  <h2>So viel Unterstützung, wie Sie wirklich brauchen.</h2>
+  <div class="packages">
+    <article>
+      <small>Präsenz</small><h3>Basis</h3>
+      <ul><li>Social-Media-Pflege</li><li>Redaktionsplanung</li><li>Regelmäßige Beiträge</li><li>Persönliche Abstimmung</li></ul>
+      <strong>Preis auf Anfrage</strong>
+      <a class="btn outline" href="#kontakt">Basis anfragen</a>
+    </article>
+    <article class="featured">
+      <small>Wachstum</small><h3>Content</h3>
+      <ul><li>Social Media Management</li><li>Content-Konzeption</li><li>Videoaufnahme und Schnitt</li><li>Plattformgerechte Aufbereitung</li></ul>
+      <strong>Preis auf Anfrage</strong>
+      <a class="btn light" href="#kontakt">Content anfragen</a>
+    </article>
+    <article>
+      <small>Individuell</small><h3>Komplett</h3>
+      <ul><li>Individuelles Medienkonzept</li><li>Social Media und Content</li><li>Website oder Modernisierung</li><li>Flexible Zusatzleistungen</li></ul>
+      <strong>Individuelles Angebot</strong>
+      <a class="btn outline" href="#kontakt">Komplett anfragen</a>
+    </article>
+  </div>
+</section>
+
+<section class="section about" id="ueber">
+  <div class="portrait">SW<span>Samuel Wagner</span></div>
+  <div>
+    <p class="kicker dark">03 / Über uns</p>
+    <h2>Direkter Kontakt statt anonymer Agenturstrukturen.</h2>
+    <p>Wagner Communication & Media Management wurde 2026 von Samuel Wagner gegründet und unterstützt kleine Unternehmen dabei, ihre Leistungen modern, verständlich und professionell zu präsentieren.</p>
+    <p>Der Schwerpunkt liegt auf persönlicher Betreuung, praktischer Umsetzung und einem fairen Preis-Leistungs-Verhältnis.</p>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div>
+    <p class="kicker">Unverbindlich anfragen</p>
+    <h2>Starten wir Ihr Projekt.</h2>
+    <p>Telefonisch erreichbar Montag bis Freitag von 12:30–13:30 Uhr und 16:00–18:00 Uhr.</p>
+    <a href="tel:+491795630406">0179 5630406</a>
+    <a href="mailto:info@wagnermediamng.com">info@wagnermediamng.com</a>
+    <a href="https://wa.me/491795630406">WhatsApp schreiben</a>
+  </div>
+
+  <form id="contact-form">
+    <label>Name<input name="name" required></label>
+    <label>E-Mail<input name="email" type="email" required></label>
+    <label>Telefonnummer<input name="phone" type="tel"></label>
+    <label>Gewünschte Leistung
+      <select name="service" required>
+        <option value="">Bitte auswählen</option>
+        <option>Social Media Management</option>
+        <option>Content-Produktion</option>
+        <option>Website-Erstellung</option>
+        <option>Website-Modernisierung</option>
+        <option>Individuelle Medienlösung</option>
+      </select>
+    </label>
+    <label>Nachricht<textarea name="message" rows="6" required></textarea></label>
+    <button class="btn light" type="submit">Anfrage vorbereiten</button>
+  </form>
+</section>
+</main>
+
+<footer>
+  <div><strong>Wagner Communication & Media Management</strong><span>Falkenstraße 6, 90579 Langenzenn</span></div>
+  <div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+</footer>
+</body>
+</html>
