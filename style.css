@@ -429,7 +429,7 @@ section{
 .packages .btn{
   margin-top:24px;
 }
-
+\n\n/* REFERENZEN */\n.references{\n  background:var(--surface);\n}\n\n.section-intro{\n  max-width:760px;\n  margin:24px 0 0;\n  color:var(--muted);\n  font-size:18px;\n}\n\n.reference-grid{\n  display:grid;\n  gap:28px;\n  margin-top:52px;\n}\n\n.reference-card{\n  padding:30px;\n  border:1px solid var(--line);\n  border-radius:30px;\n  background:var(--bg);\n  box-shadow:0 16px 45px rgba(22,28,20,.08);\n}\n\n.reference-head{\n  display:flex;\n  align-items:flex-end;\n  justify-content:space-between;\n  gap:24px;\n  margin-bottom:24px;\n}\n\n.reference-head small{\n  display:block;\n  margin-bottom:5px;\n  color:var(--olive);\n  font-size:11px;\n  font-weight:800;\n  letter-spacing:.16em;\n  text-transform:uppercase;\n}\n\n.reference-head h3{\n  margin:0;\n  font-family:Georgia,"Times New Roman",serif;\n  font-size:clamp(28px,4vw,42px);\n  font-weight:400;\n}\n\n.reference-head>span{\n  flex:0 0 auto;\n  padding:8px 13px;\n  border:1px solid var(--line);\n  border-radius:999px;\n  color:var(--muted);\n  background:#fff;\n  font-size:12px;\n  font-weight:700;\n}\n\n.before-after{\n  display:grid;\n  grid-template-columns:repeat(2,minmax(0,1fr));\n  gap:18px;\n}\n\n.before-after figure{\n  position:relative;\n  min-width:0;\n  margin:0;\n  overflow:hidden;\n  border-radius:22px;\n  background:#dfe2d9;\n  border:1px solid var(--line);\n}\n\n.before-after img{\n  width:100%;\n  height:390px;\n  object-fit:cover;\n  object-position:top center;\n  transition:transform .4s ease;\n}\n\n.before-after figure:hover img{\n  transform:scale(1.025);\n}\n\n.image-label{\n  position:absolute;\n  z-index:2;\n  top:14px;\n  left:14px;\n  padding:8px 12px;\n  border-radius:999px;\n  color:#fff;\n  background:rgba(20,25,19,.82);\n  font-size:11px;\n  font-weight:800;\n  letter-spacing:.08em;\n  text-transform:uppercase;\n  backdrop-filter:blur(8px);\n}\n\n.image-label.after{\n  background:rgba(83,98,69,.9);\n}\n
 /* ABOUT */
 .about{
   display:grid;
@@ -625,6 +625,20 @@ body>.section p{
 }
 
 @media(max-width:760px){
+  .reference-head{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .before-after{
+    grid-template-columns:1fr;
+  }
+
+  .before-after img{
+    height:auto;
+    aspect-ratio:16/10;
+  }
+
   .header{
     padding:14px 18px;
   }
@@ -707,6 +721,7 @@ body>.section p{
 
   .packages article,
   .services article,
+  .reference-card,
   .contact form{
     padding:24px;
   }
