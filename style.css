@@ -429,61 +429,170 @@ section{
 .packages .btn{
   margin-top:24px;
 }
-\n\n/* REFERENZEN */\n.references{\n  background:var(--surface);\n}\n\n.section-intro{\n  max-width:760px;\n  margin:24px 0 0;\n  color:var(--muted);\n  font-size:18px;\n}\n\n.reference-grid{\n  display:grid;\n  gap:28px;\n  margin-top:52px;\n}\n\n.reference-card{\n  padding:30px;\n  border:1px solid var(--line);\n  border-radius:30px;\n  background:var(--bg);\n  box-shadow:0 16px 45px rgba(22,28,20,.08);\n}\n\n.reference-head{\n  display:flex;\n  align-items:flex-end;\n  justify-content:space-between;\n  gap:24px;\n  margin-bottom:24px;\n}\n\n.reference-head small{\n  display:block;\n  margin-bottom:5px;\n  color:var(--olive);\n  font-size:11px;\n  font-weight:800;\n  letter-spacing:.16em;\n  text-transform:uppercase;\n}\n\n.reference-head h3{\n  margin:0;\n  font-family:Georgia,"Times New Roman",serif;\n  font-size:clamp(28px,4vw,42px);\n  font-weight:400;\n}\n\n.reference-head>span{\n  flex:0 0 auto;\n  padding:8px 13px;\n  border:1px solid var(--line);\n  border-radius:999px;\n  color:var(--muted);\n  background:#fff;\n  font-size:12px;\n  font-weight:700;\n}\n\n.before-after{\n  display:grid;\n  grid-template-columns:repeat(2,minmax(0,1fr));\n  gap:18px;\n}\n\n.before-after figure{\n  position:relative;\n  min-width:0;\n  margin:0;\n  overflow:hidden;\n  border-radius:22px;\n  background:#dfe2d9;\n  border:1px solid var(--line);\n}\n\n.before-after img{\n  width:100%;\n  height:390px;\n  object-fit:cover;\n  object-position:top center;\n  transition:transform .4s ease;\n}\n\n.before-after figure:hover img{\n  transform:scale(1.025);\n}\n\n.image-label{\n  position:absolute;\n  z-index:2;\n  top:14px;\n  left:14px;\n  padding:8px 12px;\n  border-radius:999px;\n  color:#fff;\n  background:rgba(20,25,19,.82);\n  font-size:11px;\n  font-weight:800;\n  letter-spacing:.08em;\n  text-transform:uppercase;\n  backdrop-filter:blur(8px);\n}\n\n.image-label.after{\n  background:rgba(83,98,69,.9);\n}\n
-/* ABOUT */
-.about{
-  display:grid;
-  grid-template-columns:minmax(360px,480px) minmax(0,1fr);
-  gap:70px;
-  align-items:center;
+
+
+/* REFERENZEN */
+.references{
+  background:var(--surface);
 }
 
-.about>div:last-child{
-  max-width:700px;
-}
-
-.about>div:last-child>p:not(.kicker){
+.section-intro{
   max-width:760px;
-  margin:22px 0 0;
+  margin:24px 0 0;
   color:var(--muted);
   font-size:18px;
 }
 
-.portrait{
-  min-height:0;
+.reference-grid{
+  display:grid;
+  gap:28px;
+  margin-top:52px;
+}
+
+.reference-card{
+  padding:30px;
+  border:1px solid var(--line);
+  border-radius:30px;
+  background:var(--bg);
+  box-shadow:0 16px 45px rgba(22,28,20,.08);
+}
+
+.reference-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:24px;
+  margin-bottom:24px;
+}
+
+.reference-head small{
+  display:block;
+  margin-bottom:5px;
+  color:var(--olive);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+.reference-head h3{
+  margin:0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(28px,4vw,42px);
+  font-weight:400;
+}
+
+.reference-head>span{
+  flex:0 0 auto;
+  padding:8px 13px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:var(--muted);
+  background:#fff;
+  font-size:12px;
+  font-weight:700;
+}
+
+.before-after{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+
+.before-after figure{
+  position:relative;
+  min-width:0;
+  margin:0;
+  overflow:hidden;
+  border-radius:22px;
+  background:#dfe2d9;
+  border:1px solid var(--line);
+}
+
+.before-after img{
+  width:100%;
+  height:390px;
+  object-fit:cover;
+  object-position:top center;
+  transition:transform .4s ease;
+}
+
+.before-after figure:hover img{
+  transform:scale(1.025);
+}
+
+.image-label{
+  position:absolute;
+  z-index:2;
+  top:14px;
+  left:14px;
+  padding:8px 12px;
+  border-radius:999px;
+  color:#fff;
+  background:rgba(20,25,19,.82);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  backdrop-filter:blur(8px);
+}
+
+.image-label.after{
+  background:rgba(83,98,69,.9);
+}
+
+/* ABOUT */
+.section.about{
+  display:grid;
+  grid-template-columns:minmax(0,460px) minmax(0,1fr);
+  gap:70px;
+  align-items:center;
+}
+
+.section.about > .photo-portrait{
+  position:relative;
+  width:100%;
+  min-width:0;
+  margin:0;
+  padding:0;
+  overflow:hidden;
   border-radius:32px;
+  background:transparent;
   box-shadow:var(--shadow);
 }
 
-.photo-portrait{
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:0;
-  overflow:hidden;
-  background:#202a1f;
-}
-
-.photo-portrait img{
+.section.about > .photo-portrait img{
+  display:block;
   width:100%;
   height:auto;
-  max-height:650px;
-  object-fit:contain;
-  object-position:center;
+  max-width:none;
+  max-height:none;
+  object-fit:initial;
+  object-position:initial;
 }
 
-.photo-portrait span{
+.section.about > .photo-portrait span{
   position:absolute;
   left:0;
   right:0;
   bottom:0;
-  padding:50px 28px 24px;
+  padding:70px 28px 24px;
   color:#fff;
   background:linear-gradient(transparent,rgba(0,0,0,.82));
-  font-family:Georgia,serif;
+  font-family:Georgia,"Times New Roman",serif;
   font-size:28px;
   text-align:left;
+}
+
+.section.about > div:last-child{
+  max-width:700px;
+}
+
+.section.about > div:last-child > p:not(.kicker){
+  max-width:760px;
+  margin:22px 0 0;
+  color:var(--muted);
+  font-size:18px;
 }
 
 /* CONTACT */
@@ -743,5 +852,49 @@ body>.section p{
 
   footer>div:last-child{
     flex-wrap:wrap;
+  }
+}
+
+
+/* FINALER FIX: ÜBER-UNS-BEREICH */
+@media (min-width:981px){
+  .section.about{
+    grid-template-columns:minmax(0,460px) minmax(0,1fr) !important;
+    gap:70px !important;
+    align-items:center !important;
+  }
+
+  .section.about > .photo-portrait{
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    background:transparent !important;
+  }
+
+  .section.about > .photo-portrait img{
+    width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:initial !important;
+  }
+}
+
+@media (max-width:980px){
+  .section.about{
+    grid-template-columns:1fr !important;
+    gap:40px !important;
+  }
+
+  .section.about > .photo-portrait{
+    width:100% !important;
+    max-width:500px !important;
+    margin:0 auto !important;
+    background:transparent !important;
+  }
+
+  .section.about > .photo-portrait img{
+    width:100% !important;
+    height:auto !important;
+    max-height:none !important;
   }
 }
