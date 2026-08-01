@@ -121,3 +121,28 @@ footer{display:flex;justify-content:space-between;gap:25px;align-items:center;pa
     line-height:1.6;
   }
 }
+
+
+
+/* Fix: Kontaktbuttons aus jeder Richtung vollständig anklickbar */
+.contact-bg-word,
+.cursor-glow {
+    pointer-events: none;
+}
+
+.contact-copy {
+    position: relative;
+    z-index: 20;
+}
+
+.contact-links {
+    position: relative;
+    z-index: 30;
+}
+
+.contact-links a {
+    position: relative;
+    z-index: 31;
+    width: 100%;
+    pointer-events: auto;
+}
