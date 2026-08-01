@@ -20,3 +20,30 @@ footer{display:flex;justify-content:space-between;gap:25px;align-items:center;pa
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:none}
 @media(max-width:900px){.main-nav{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;padding:20px;border-radius:20px;background:#1a2217}.main-nav.open{display:flex}.menu-toggle{display:block}.hero,.intro-grid,.about,.contact{grid-template-columns:1fr}.hero-panel{min-height:420px}.service-grid,.package-grid{grid-template-columns:1fr}.package-card.featured{transform:none}.form-row{grid-template-columns:1fr}.project-meta{grid-template-columns:1fr}.project-meta>b{display:none}}
 @media(max-width:600px){.site-header{width:calc(100% - 20px)}.brand small{display:none}.hero{padding:125px 20px 75px}.hero h1{font-size:52px}.section-shell{padding:85px 20px}.hero-panel{padding:18px}.service-card{grid-template-columns:auto 1fr;min-height:230px}.service-card b{display:none}.about-facts{grid-template-columns:1fr}.comparison{aspect-ratio:4/3}.contact-form{padding:20px}footer{flex-direction:column;align-items:flex-start}}
+
+
+.contact-links{
+    display:grid;
+    gap:0;
+    margin-top:35px;
+}
+.contact-links a{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+    transition:.25s;
+    cursor:pointer;
+}
+.contact-links a:hover{
+    color:#d6e2c8;
+    padding-left:8px;
+}
+.contact-links span:last-child{
+    font-size:20px;
+    transition:.25s;
+}
+.contact-links a:hover span:last-child{
+    transform:translateX(6px);
+}
