@@ -31,20 +31,14 @@ footer{display:flex;justify-content:space-between;gap:25px;align-items:center;pa
     display:flex;
     justify-content:space-between;
     align-items:center;
-    width:100%;
-    min-height:72px;
-    padding:20px 18px;
-    margin:6px 0;
-    border-radius:16px;
-    border:1px solid rgba(255,255,255,.12);
-    background:rgba(255,255,255,.03);
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
     transition:.25s;
     cursor:pointer;
-    -webkit-tap-highlight-color:transparent;
 }
 .contact-links a:hover{
     color:#d6e2c8;
-    transform:translateX(6px);
+    padding-left:8px;
 }
 .contact-links span:last-child{
     font-size:20px;
@@ -52,4 +46,78 @@ footer{display:flex;justify-content:space-between;gap:25px;align-items:center;pa
 }
 .contact-links a:hover span:last-child{
     transform:translateX(6px);
+}
+
+
+/* Mobile V2 improvements */
+
+@media (max-width: 900px){
+  .hero{
+    grid-template-columns:1fr;
+    gap:32px;
+    padding:110px 22px 70px;
+    min-height:auto;
+  }
+
+  .hero-panel{
+    display:none;
+  }
+
+  .hero-content{
+    max-width:100%;
+  }
+
+  .hero h1{
+    font-size:44px;
+    line-height:0.98;
+  }
+
+  .hero-text{
+    font-size:18px;
+    max-width:100%;
+    margin-top:22px;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+    width:100%;
+  }
+
+  .hero-actions .button{
+    width:100%;
+  }
+
+  .hero-mark{
+    width:120%;
+    right:-45%;
+    opacity:.03;
+  }
+
+  .scroll-hint{
+    display:none;
+  }
+
+  .site-header{
+    padding:10px 14px;
+  }
+
+  .brand img{
+    width:40px;
+    height:40px;
+  }
+}
+
+@media (max-width:600px){
+  .hero{
+    padding-top:105px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .hero-text{
+    font-size:17px;
+    line-height:1.6;
+  }
 }
