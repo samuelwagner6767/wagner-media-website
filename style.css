@@ -31,14 +31,20 @@ footer{display:flex;justify-content:space-between;gap:25px;align-items:center;pa
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 0;
-    border-bottom:1px solid rgba(255,255,255,.12);
+    width:100%;
+    min-height:72px;
+    padding:20px 18px;
+    margin:6px 0;
+    border-radius:16px;
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.03);
     transition:.25s;
     cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
 }
 .contact-links a:hover{
     color:#d6e2c8;
-    padding-left:8px;
+    transform:translateX(6px);
 }
 .contact-links span:last-child{
     font-size:20px;
