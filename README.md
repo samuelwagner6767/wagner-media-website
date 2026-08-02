@@ -1,16 +1,19 @@
-# WCM Premium Liquid Glass
+# WCM Website mit Leistungs-Unterseiten
 
-Direkt für GitHub Pages vorbereitet.
+Enthaltene neue Seiten:
 
-## Upload
-1. Inhalt der ZIP entpacken.
-2. Alle Dateien in dein GitHub-Repository hochladen.
-3. Unter **Settings → Pages** den Branch `main` und `/root` auswählen.
-4. Falls die Domain bereits verbunden ist, die Datei `CNAME` beibehalten.
+- `social-media-management.html`
+- `content-produktion.html`
+- `webdesign.html`
+- `individuelle-loesungen.html`
 
-## Bilder
-Die Website verwendet:
-- `assets/wcm-logo.png`
-- `assets/samuel-wagner.jpg`
-- `assets/autohaus-vorher.jpg`
-- `assets/autohaus-nachher.jpg`
+Die vier großen Leistungskarten auf der Startseite sind vollständig anklickbar und führen jeweils zur passenden Detailseite.
+
+## Benötigte Bilder im Ordner `assets`
+
+- `wcm-logo.png`
+- `samuel-wagner.jpg`
+- `autohaus-vorher.jpg`
+- `autohaus-nachher.jpg`
+
+Die vorhandene Domain-Konfiguration bleibt über `CNAME` erhalten.
