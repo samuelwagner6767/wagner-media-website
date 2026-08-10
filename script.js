@@ -22,6 +22,7 @@ document.querySelectorAll('[data-comparison]').forEach(box=>{
 document.querySelectorAll('[data-package]').forEach(link=>link.addEventListener('click',()=>{
   const select=document.querySelector('[name="service"]');
   if(link.dataset.package==='Basis'||link.dataset.package==='Content') select.value='Social Media Management';
+  else if(link.dataset.package==='Gründungsaktion') select.value='Aktuelle Aktion';
   else select.value='Individuelle Medienlösung';
 }));
 
