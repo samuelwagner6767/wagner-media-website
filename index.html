@@ -140,13 +140,16 @@
       </div>
 
       <article class="project reveal">
-        <div class="project-meta"><span>01</span><div><small>Webdesign-Konzept</small><h3>Beispiel-Website</h3></div><b>Website-Redesign</b></div>
+        <div class="project-meta"><span>01</span><div><small>Webdesign-Redesign</small><h3>Autohaus Rohringer</h3></div><b>Alt / Neu</b></div>
         <div class="comparison" data-comparison>
-          <img src="assets/autohaus-nachher.jpg" alt="Moderne Beispiel-Website">
-          <div class="comparison-before"><img src="assets/autohaus-vorher.jpg" alt="Ausgangsversion der Beispiel-Website"></div>
+          <!-- NEU: MP4 unter assets/videos/autohaus-rohringer-neu.mp4 ablegen. -->
+          <video class="comparison-after-video" autoplay muted loop playsinline preload="metadata" poster="assets/autohaus-nachher.jpg" aria-label="Autohaus Rohringer neu">
+            <source src="assets/videos/autohaus-rohringer-neu.mp4" type="video/mp4">
+          </video>
+          <div class="comparison-before"><img src="assets/autohaus-vorher.jpg" alt="Autohaus Rohringer alt"></div>
           <div class="comparison-line"><span>↔</span></div>
-          <input type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher-Vergleich">
-          <span class="compare-label before">Vorher</span><span class="compare-label after">Nachher</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Vergleich Autohaus Rohringer alt und neu">
+          <span class="compare-label before">Autohaus Rohringer alt</span><span class="compare-label after">Autohaus Rohringer neu</span>
         </div>
       </article>
     </section>
