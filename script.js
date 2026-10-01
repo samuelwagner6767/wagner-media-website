@@ -34,3 +34,103 @@ if(contactForm) contactForm.addEventListener('submit',e=>{
   const body=encodeURIComponent(`Name: ${d.get('name')}\nE-Mail: ${d.get('email')}\nTelefon: ${d.get('phone')}\nLeistung: ${d.get('service')}\n\nNachricht:\n${d.get('message')}`);
   location.href=`mailto:info@wagnermediamng.com?subject=${subject}&body=${body}`;
 });
+
+
+/* Smooth inertial scrolling — scroll feel only. No layout/content changes. */
+(()=>{
+  const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const finePointer=window.matchMedia('(pointer: fine)').matches;
+  if(reduceMotion||!finePointer)return;
+
+  const root=document.documentElement;
+  root.classList.add('smooth-scroll-active');
+
+  let currentY=window.scrollY;
+  let targetY=currentY;
+  let rafId=0;
+  let animating=false;
+
+  const clamp=(value,min,max)=>Math.min(Math.max(value,min),max);
+  const maxScroll=()=>Math.max(0,document.documentElement.scrollHeight-window.innerHeight);
+
+  const normalizeWheelDelta=(event)=>{
+    let delta=event.deltaY;
+    if(event.deltaMode===1)delta*=16;
+    if(event.deltaMode===2)delta*=window.innerHeight;
+    return delta;
+  };
+
+  const hasOwnScrollArea=(node)=>{
+    let el=node instanceof Element?node:null;
+    while(el&&el!==document.body){
+      const style=getComputedStyle(el);
+      const overflowY=style.overflowY;
+      if((overflowY==='auto'||overflowY==='scroll')&&el.scrollHeight>el.clientHeight+1)return true;
+      el=el.parentElement;
+    }
+    return false;
+  };
+
+  const render=()=>{
+    const distance=targetY-currentY;
+    currentY+=distance*.115;
+
+    if(Math.abs(distance)<.35){
+      currentY=targetY;
+      animating=false;
+      rafId=0;
+      window.scrollTo(0,currentY);
+      return;
+    }
+
+    window.scrollTo(0,currentY);
+    rafId=requestAnimationFrame(render);
+  };
+
+  const startRender=()=>{
+    if(rafId)return;
+    animating=true;
+    currentY=window.scrollY;
+    rafId=requestAnimationFrame(render);
+  };
+
+  window.addEventListener('wheel',event=>{
+    if(event.defaultPrevented||event.ctrlKey||hasOwnScrollArea(event.target))return;
+
+    const delta=normalizeWheelDelta(event);
+    if(!Number.isFinite(delta)||Math.abs(delta)<.01)return;
+
+    event.preventDefault();
+    targetY=clamp(targetY+delta*.92,0,maxScroll());
+    startRender();
+  },{passive:false});
+
+  window.addEventListener('scroll',()=>{
+    if(animating)return;
+    currentY=window.scrollY;
+    targetY=currentY;
+  },{passive:true});
+
+  window.addEventListener('resize',()=>{
+    targetY=clamp(targetY,0,maxScroll());
+    currentY=clamp(currentY,0,maxScroll());
+  },{passive:true});
+
+  document.querySelectorAll('a[href^="#"]').forEach(link=>{
+    link.addEventListener('click',event=>{
+      const href=link.getAttribute('href');
+      if(!href||href==='#')return;
+
+      let target;
+      try{target=document.querySelector(href)}catch{return;}
+      if(!target)return;
+
+      event.preventDefault();
+      const scrollMargin=parseFloat(getComputedStyle(target).scrollMarginTop)||0;
+      targetY=clamp(target.getBoundingClientRect().top+window.scrollY-scrollMargin,0,maxScroll());
+      startRender();
+
+      if(location.hash!==href)history.pushState(null,'',href);
+    });
+  });
+})();
