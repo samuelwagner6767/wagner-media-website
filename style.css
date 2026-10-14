@@ -384,3 +384,6 @@ footer{display:flex;justify-content:space-between;gap:25px;align-items:center;pa
 }
 
 @media(max-width:600px){.news-window{padding:24px}.news-meta{align-items:flex-start;flex-direction:column;gap:6px}}
+
+/* App Development: fünfte Leistungskarte über volle Breite */
+.service-grid .service-card:last-child:nth-child(odd){grid-column:1/-1}
